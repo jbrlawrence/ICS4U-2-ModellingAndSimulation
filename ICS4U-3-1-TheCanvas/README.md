@@ -32,9 +32,29 @@ ctx.beginPath();
 ctx.arc(100, 50, 20, 0, 2 * Math.PI);
 ctx.fill();
 ```
-Starting with the attached files *canvasBasics.html* and *canvasBasics.js* complete the tutorial shared through classroom that shows how to draw a jack o' lantern.
+
+## Tutorial
+Starting with the attached files *canvasBasics.html* and *canvasBasics.js* complete the [tutorial video here](https://drive.google.com/file/d/1QK1tx6S5EpAwCeQPvD8_Uw-kyfkLUr0w/view?usp=sharing) that shows how to draw a jack o' lantern.
+
+
+## Challenges
 
 See the attached files *canvasExample.html* and *canvasExample.js* for a examples and a series of challenges using the HTML canvas.
+
+### Challenge 1
+Draw this image on the 5th canvas
+![challenge 1 image](./ICS4U-3-1-Canvas5.png)
+
+### Challenge 2
+Draw this image on the 6th canvas
+![challenge 2 image](./ICS4U-3-1-Canvas6.png)
+
+### Challenge 3
+Draw this image on the 7th canvas (hint: using translate, rotate and bezier would help!)
+![challenge 3 image](./ICS4U-3-1-Canvas7.png)
+
+### Challenge 4
+Choose one of the drawings above, and animate this drawing instead of the circle that is shown bouncing on the 4th canvas. Draw this animation on the 8th canvas.
 
 ## Resources
 [W3Schools reference for the HTML canvas](https://www.w3schools.com/tags/ref_canvas.asp)
