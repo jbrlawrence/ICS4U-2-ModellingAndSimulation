@@ -1,0 +1,33 @@
+body {
+    margin: 40px auto;
+    max-width: 650px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #444;
+    padding: 0 10
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2
+}
+
+img {
+    width: 100%;
+}
+
+div {
+    padding: 0;
+    margin: 0;
+}
+
+canvas {
+    border: solid;
+    border-color: lightgrey;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 50px;
+}
