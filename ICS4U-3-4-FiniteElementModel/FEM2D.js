@@ -77,29 +77,31 @@ function setup() {
       elements[i][j].neighbourAdd(elements[i + 1][j + 1]);
     }
   }
+  // setting one element to dead;
     elements[30][30].alive = false;
+
+  // drawing all elements
   for (let i = 0; i < elements.length; i++) {
     for (let j = 0; j < elements[i].length; j++) {
       elements[i][j].draw();
     }
   }
 
-
-
   console.log(elements[30][30])
   // activating an animation (runs over and over)
-  window.requestAnimationFrame(draw);
+  // window.requestAnimationFrame(draw);
 }
 
-let counter = 0;
 
 function draw() {
   ctx.clearRect(0, 0, 500, 500);
+  // looping through to check neighbours
   for (let i = 0; i < elements.length; i++) {
     for (let j = 0; j < elements[i].length; j++) {
       elements[i][j].neighbourCheck();
     }
   }
+  // making decisions and drawing.
   for (let i = 0; i < elements.length; i++) {
     for (let j = 0; j < elements[i].length; j++) {
       elements[i][j].decision();
