@@ -14,8 +14,6 @@ class Element {
     this.h = h;
     this.counter = 0;
     this.neighbours = [];
-    // add properties and set them to inputs here
-    // needed properties x, y, x_v, y_v,
   }
   setNeighbours(n) {
     this.neighbours.push(n);
@@ -65,16 +63,14 @@ function setup() {
     elements[i].setNeighbours(elements[i + 1]);
   }
   console.log(elements);
-  elements[49].alive = false;
+  elements[80].alive = false;
   for (let i in elements) {
     elements[i].draw();
   }
   console.log(elements[20]);
   // activating an animation (runs over and over)
-  // window.requestAnimationFrame(draw);
+   // window.requestAnimationFrame(draw);
 }
-
-let counter = 0;
 
 function draw() {
   ctx.clearRect(0, 0, 500, 500);
@@ -84,6 +80,5 @@ function draw() {
   for (let i in elements){
     elements[i].draw();
   }
-  console.log(elements)
-  //window.requestAnimationFrame(draw);
+   //window.requestAnimationFrame(draw);
 }

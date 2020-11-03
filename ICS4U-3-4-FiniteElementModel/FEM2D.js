@@ -14,8 +14,7 @@ class Element {
     this.h = h;
     this.counter = 0;
     this.neighbours = [];
-    // add properties and set them to inputs here
-    // needed properties x, y, x_v, y_v,
+
   }
 
   draw() {
@@ -35,7 +34,7 @@ class Element {
   }
   neighbourCheck(){
     this.counter = 0;
-    //console.log(this.neighbours)
+    // using the counter property to cound the number of "live" neighbours for each element
     for (let i in this.neighbours){
       if (this.neighbours[i].alive){
         this.counter++;
@@ -43,7 +42,14 @@ class Element {
     }
   }
   decision(){
-    if (this.counter < 8){
+    // applying the rules of conway's game of life
+    if (this.counter == 3){
+      this.alive = true;
+    }
+    else if (this.counter < 2){
+      this.alive = false;
+    }
+    else if (this.counter > 3){
       this.alive = false;
     }
   }
@@ -59,14 +65,17 @@ function setup() {
   console.log(elements)
   // creating our 2D matrix that contains all elements
   for (let i = 0; i < 500 / size; i++) {
+    // for each row pushing an empty array to the elements array
     elements.push([]);
     for (let j = 0; j < 500 / size; j++) {
-      elements[i].push(new Element(true, i * size, j * size, size, size));
+      // for each column in the row array adding an element object with random alive/dead property
+      elements[i].push(new Element(Math.random()>.5, i * size, j * size, size, size));
     }
   }
   // looping through and adding neighbours
   for (let i = 1; i < elements.length - 1; i++) {
     for (let j = 1; j < elements[i].length - 1; j++) {
+      // for each element i,j adding the 8 surrounding elements as neighbours
       elements[i][j].neighbourAdd(elements[i - 1][j - 1]);
       elements[i][j].neighbourAdd(elements[i][j - 1]);
       elements[i][j].neighbourAdd(elements[i + 1][j - 1]);
@@ -77,8 +86,6 @@ function setup() {
       elements[i][j].neighbourAdd(elements[i + 1][j + 1]);
     }
   }
-  // setting one element to dead;
-    elements[30][30].alive = false;
 
   // drawing all elements
   for (let i = 0; i < elements.length; i++) {
@@ -86,10 +93,8 @@ function setup() {
       elements[i][j].draw();
     }
   }
-
-  console.log(elements[30][30])
   // activating an animation (runs over and over)
-  // window.requestAnimationFrame(draw);
+   window.requestAnimationFrame(draw);
 }
 
 
@@ -108,6 +113,5 @@ function draw() {
       elements[i][j].draw();
     }
   }
-console.log(elements)
-  //window.requestAnimationFrame(draw);
+  window.requestAnimationFrame(draw);
 }
