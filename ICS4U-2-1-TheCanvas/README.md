@@ -10,6 +10,12 @@ I can:
 - [ ] Solve complex problems by breaking them down into simple steps I can achieve with code
 - [ ] Use coding patterns to organize my thoughts and better understand the world
 
+## Files
+Within this directory you will find three sets of HTML/CSS/JS files these are:
+- canvasBasics.* - an example that will be created through the video [tutorial below](#tutorial)
+- 2-1-DrawingOnTheCanvas.* - a demonstration of basic drawing methods that create, fill and stroke shapes
+- canvasExamples.* - a set of files to complete the drawing [challenges below](#challenges)
+
 
 ## The HTML Canvas Tag
 We will be using the HTML5 canvas to draw on the browser screen in a similar way to Processing that we used last year.
@@ -36,6 +42,11 @@ ctx.fill();
 ## Tutorial
 Starting with the attached files *canvasBasics.html* and *canvasBasics.js* complete the [tutorial video here](https://drive.google.com/file/d/1QK1tx6S5EpAwCeQPvD8_Uw-kyfkLUr0w/view?usp=sharing) that shows how to draw a jack o' lantern.
 
+**NOTE: The above video was created for a different editor/coding environment. Please ignore the first couple of minutes setting up in github, we will learn these tools later in the course.**
+
+## Drawing Methods
+
+Using the files 2-1-DrawingOnTheCanvas.* observe how shapes can be created on the canvas using the drawing methods included in HTML5. Open the files, observe how shapes are created, and add a shape of your own, using at least one new method found from the [resources below](#resources).
 
 ## Challenges
 
@@ -43,15 +54,15 @@ See the attached files *canvasExample.html* and *canvasExample.js* for a example
 
 ### Challenge 1
 Draw this image on the 5th canvas
-![challenge 1 image](./ICS4U-3-1-Canvas5.png)
+![challenge 1 image](./ICS4U-2-1-Canvas5.png)
 
 ### Challenge 2
 Draw this image on the 6th canvas
-![challenge 2 image](./ICS4U-3-1-Canvas6.png)
+![challenge 2 image](./ICS4U-2-1-Canvas6.png)
 
 ### Challenge 3
 Draw this image on the 7th canvas (hint: using translate, rotate and bezier would help!)
-![challenge 3 image](./ICS4U-3-1-Canvas7.png)
+![challenge 3 image](./ICS4U-2-1-Canvas7.png)
 
 ### Challenge 4
 Choose one of the drawings above, and animate this drawing instead of the circle that is shown bouncing on the 4th canvas. Draw this animation on the 8th canvas.
@@ -62,3 +73,5 @@ Choose one of the drawings above, and animate this drawing instead of the circle
 [Mozilla Developer reference for the HTML Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
 
 [Mozilla Developer canvas tutorial](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial)
+
+[The Canvas Handbook (single page full reference, searchable)](https://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html)
